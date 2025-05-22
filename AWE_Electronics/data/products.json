@@ -1,0 +1,30 @@
+[
+    {
+        "product_id": "P001",
+        "name": "Laptop",
+        "price": 1200.0,
+        "category": "Computers",
+        "stock": 5
+    },
+    {
+        "product_id": "P002",
+        "name": "Bluetooth Speaker",
+        "price": 80.0,
+        "category": "Audio",
+        "stock": 10
+    },
+    {
+        "product_id": "P003",
+        "name": "Gaming Mouse",
+        "price": 45.0,
+        "category": "Accessories",
+        "stock": 15
+    },
+    {
+        "product_id": "P004",
+        "name": "Phone Case",
+        "price": 20.0,
+        "category": "Cases",
+        "stock": 5
+    }
+]
