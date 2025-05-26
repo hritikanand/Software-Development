@@ -25,6 +25,14 @@
         "name": "Phone Case",
         "price": 20.0,
         "category": "Cases",
-        "stock": 5
+        "stock": 15
+    },
+    {
+        "product_id": "P005",
+        "name": "headphone",
+        "price": 300.0,
+        "category": "Audio",
+        "stock": 100,
+        "description": ""
     }
 ]

@@ -1,0 +1,110 @@
+2025-05-26 14:39:38,730 - INFO - Starting AWE Electronics Online Store v3.0
+2025-05-26 14:39:38,730 - INFO - All dependencies verified successfully
+2025-05-26 14:39:38,730 - INFO - Data directory ready: data
+2025-05-26 14:39:38,730 - INFO - Launching main GUI
+2025-05-26 14:44:55,723 - INFO - GUI closed normally
+2025-05-26 14:44:55,724 - INFO - Application shutdown normally
+2025-05-26 14:45:21,280 - INFO - Starting AWE Electronics Online Store v3.0
+2025-05-26 14:45:21,280 - INFO - All dependencies verified successfully
+2025-05-26 14:45:21,280 - INFO - Data directory ready: data
+2025-05-26 14:45:21,280 - INFO - Launching main GUI
+2025-05-26 14:55:42,468 - INFO - GUI closed normally
+2025-05-26 14:55:42,469 - INFO - Application shutdown normally
+2025-05-26 14:56:17,106 - INFO - Starting AWE Electronics Online Store v3.0
+2025-05-26 14:56:17,106 - INFO - All dependencies verified successfully
+2025-05-26 14:56:17,107 - INFO - Data directory ready: data
+2025-05-26 14:56:17,108 - INFO - Launching main GUI
+2025-05-26 15:08:01,394 - INFO - GUI closed normally
+2025-05-26 15:08:01,394 - INFO - Application shutdown normally
+2025-05-26 15:08:03,641 - INFO - Starting AWE Electronics Online Store v3.0
+2025-05-26 15:08:03,641 - INFO - All dependencies verified successfully
+2025-05-26 15:08:03,641 - INFO - Data directory ready: data
+2025-05-26 15:08:03,641 - INFO - Launching main GUI
+2025-05-26 15:08:33,757 - INFO - GUI closed normally
+2025-05-26 15:08:33,757 - INFO - Application shutdown normally
+2025-05-26 15:08:36,882 - INFO - Starting AWE Electronics Online Store v3.0
+2025-05-26 15:08:36,882 - INFO - All dependencies verified successfully
+2025-05-26 15:08:36,882 - INFO - Data directory ready: data
+2025-05-26 15:08:36,882 - INFO - Launching main GUI
+2025-05-26 15:11:14,056 - INFO - GUI closed normally
+2025-05-26 15:11:14,056 - INFO - Application shutdown normally
+2025-05-26 15:11:16,283 - INFO - Starting AWE Electronics Online Store v3.0
+2025-05-26 15:11:16,284 - INFO - All dependencies verified successfully
+2025-05-26 15:11:16,284 - INFO - Data directory ready: data
+2025-05-26 15:11:16,284 - INFO - Launching main GUI
+2025-05-26 15:16:10,947 - INFO - GUI closed normally
+2025-05-26 15:16:10,949 - INFO - Application shutdown normally
+2025-05-26 15:16:13,018 - INFO - Starting AWE Electronics Online Store v3.0
+2025-05-26 15:16:13,018 - INFO - All dependencies verified successfully
+2025-05-26 15:16:13,018 - INFO - Data directory ready: data
+2025-05-26 15:16:13,018 - INFO - Launching main GUI
+2025-05-26 15:22:06,156 - INFO - GUI closed normally
+2025-05-26 15:22:06,157 - INFO - Application shutdown normally
+2025-05-26 17:48:08,236 - INFO - Starting AWE Electronics Online Store v3.1
+2025-05-26 17:48:09,188 - INFO - All dependencies verified successfully
+2025-05-26 17:48:09,188 - INFO - Data directory ready: data
+2025-05-26 17:48:09,211 - INFO - Launching main GUI
+2025-05-26 19:02:29,457 - INFO - Starting AWE Electronics Online Store v3.1
+2025-05-26 19:02:30,670 - INFO - All dependencies verified successfully
+2025-05-26 19:02:30,680 - INFO - Data directory ready: data
+2025-05-26 19:02:30,710 - ERROR - Failed to setup data files: cannot import name 'initialize_default_data' from 'utils.file_handler' (D:\Sem01 2025\Software Architectures and Design\Software-Development\awe_electronics\utils\file_handler.py)
+2025-05-26 19:04:35,126 - INFO - Starting AWE Electronics Online Store v3.1
+2025-05-26 19:04:35,299 - INFO - All dependencies verified successfully
+2025-05-26 19:04:35,301 - INFO - Data directory ready: data
+2025-05-26 19:04:35,336 - INFO - Launching main GUI
+2025-05-26 19:08:56,587 - INFO - GUI closed normally
+2025-05-26 19:08:56,589 - INFO - Application shutdown normally
+2025-05-26 19:09:36,242 - INFO - Starting AWE Electronics Online Store v3.1
+2025-05-26 19:09:36,342 - INFO - All dependencies verified successfully
+2025-05-26 19:09:36,348 - INFO - Data directory ready: data
+2025-05-26 19:09:36,350 - INFO - Launching main GUI
+2025-05-26 19:11:29,158 - INFO - GUI closed normally
+2025-05-26 19:11:29,158 - INFO - Application shutdown normally
+2025-05-26 19:11:46,002 - INFO - Starting AWE Electronics Online Store v3.1
+2025-05-26 19:11:46,139 - INFO - All dependencies verified successfully
+2025-05-26 19:11:46,151 - INFO - Data directory ready: data
+2025-05-26 19:11:46,154 - INFO - Launching main GUI
+2025-05-26 19:22:10,522 - INFO - GUI closed normally
+2025-05-26 19:22:10,523 - INFO - Application shutdown normally
+2025-05-26 19:22:16,425 - INFO - Starting AWE Electronics Online Store v3.1
+2025-05-26 19:22:16,603 - INFO - All dependencies verified successfully
+2025-05-26 19:22:16,608 - INFO - Data directory ready: data
+2025-05-26 19:22:16,612 - INFO - Launching main GUI
+2025-05-26 19:22:34,873 - INFO - GUI closed normally
+2025-05-26 19:22:34,878 - INFO - Application shutdown normally
+2025-05-26 19:24:58,836 - INFO - Starting AWE Electronics Online Store v3.1
+2025-05-26 19:24:59,045 - INFO - All dependencies verified successfully
+2025-05-26 19:24:59,050 - INFO - Data directory ready: data
+2025-05-26 19:24:59,052 - INFO - Launching main GUI
+2025-05-26 19:25:04,442 - INFO - GUI closed normally
+2025-05-26 19:25:04,442 - INFO - Application shutdown normally
+2025-05-26 19:39:56,660 - INFO - Starting AWE Electronics Online Store v3.1
+2025-05-26 19:39:56,830 - INFO - All dependencies verified successfully
+2025-05-26 19:39:56,834 - INFO - Data directory ready: data
+2025-05-26 19:39:56,834 - INFO - Launching main GUI
+2025-05-26 19:55:45,748 - INFO - GUI closed normally
+2025-05-26 19:55:45,748 - INFO - Application shutdown normally
+2025-05-26 19:55:52,798 - INFO - Starting AWE Electronics Online Store v3.1
+2025-05-26 19:55:52,860 - INFO - All dependencies verified successfully
+2025-05-26 19:55:52,860 - INFO - Data directory ready: data
+2025-05-26 19:55:52,860 - INFO - Launching main GUI
+2025-05-26 20:03:25,912 - INFO - GUI closed normally
+2025-05-26 20:03:25,912 - INFO - Application shutdown normally
+2025-05-26 20:03:41,417 - INFO - Starting AWE Electronics Online Store v3.1
+2025-05-26 20:03:41,484 - INFO - All dependencies verified successfully
+2025-05-26 20:03:41,484 - INFO - Data directory ready: data
+2025-05-26 20:03:41,484 - INFO - Launching main GUI
+2025-05-26 20:11:17,093 - INFO - GUI closed normally
+2025-05-26 20:11:17,094 - INFO - Application shutdown normally
+2025-05-26 20:11:41,701 - INFO - Starting AWE Electronics Online Store v3.1
+2025-05-26 20:11:41,766 - INFO - All dependencies verified successfully
+2025-05-26 20:11:41,770 - INFO - Data directory ready: data
+2025-05-26 20:11:41,770 - INFO - Launching main GUI
+2025-05-26 20:17:18,644 - INFO - GUI closed normally
+2025-05-26 20:17:18,644 - INFO - Application shutdown normally
+2025-05-26 20:17:21,638 - INFO - Starting AWE Electronics Online Store v3.1
+2025-05-26 20:17:21,700 - INFO - All dependencies verified successfully
+2025-05-26 20:17:21,700 - INFO - Data directory ready: data
+2025-05-26 20:17:21,700 - INFO - Launching main GUI
+2025-05-26 20:18:08,385 - INFO - GUI closed normally
+2025-05-26 20:18:08,386 - INFO - Application shutdown normally

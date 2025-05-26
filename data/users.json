@@ -1,0 +1,26 @@
+[
+    {
+        "username": "admin",
+        "password": "admin123",
+        "email": "admin@aweelectronics.com",
+        "role": "admin"
+    },
+    {
+        "username": "customer1",
+        "password": "customer123",
+        "email": "customer@example.com",
+        "role": "customer",
+        "address": "123 Main St, Melbourne VIC 3000",
+        "phone_number": "0400000001",
+        "cart": []
+    },
+    {
+        "username": "saqib",
+        "password": "saqib1",
+        "email": "saqibsoomro@gmail.com",
+        "role": "customer",
+        "address": "4 kelebel",
+        "phone_number": "0456456456",
+        "cart": []
+    }
+]
