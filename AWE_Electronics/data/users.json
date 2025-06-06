@@ -92,5 +92,15 @@
         "phone_number": "0456456288",
         "full_name": "saqib",
         "cart": []
+    },
+    {
+        "username": "saqibss",
+        "password": "saqib1234",
+        "email": "saqibsoomro00@gmail.com",
+        "role": "customer",
+        "address": "4 kelebek",
+        "phone_number": "0456039987",
+        "full_name": "saqib",
+        "cart": []
     }
 ]

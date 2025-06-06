@@ -1,4 +1,0 @@
-2025-05-26 14:35:25,934 - INFO - Starting AWE Electronics Online Store v3.0
-2025-05-26 14:35:25,934 - ERROR - Dependency verification failed: Missing required directories: gui, models, utils
-2025-05-26 20:19:29,099 - INFO - Starting AWE Electronics Online Store v3.1
-2025-05-26 20:19:29,165 - ERROR - Dependency verification failed: Missing required directories: gui, models, utils
