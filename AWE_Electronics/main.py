@@ -17,8 +17,6 @@ Features:
 - Enhanced error handling and validation
 
 Author: AWE Electronics Development Team
-Version: 3.1 - Enhanced GUI Edition with Responsive Design
-License: MIT
 """
 
 import sys
@@ -65,13 +63,13 @@ class AWEElectronicsApp:
     def display_startup_info(self):
         """Display enhanced startup information"""
         print("=" * 70)
-        print(f"🏪 {self.app_name.upper()}")
+        print(f" {self.app_name.upper()}")
         print("=" * 70)
         print(f"Version: {self.version} - Enhanced Responsive GUI Edition")
         print(f"Python Version: {sys.version.split()[0]}")
         print(f"Platform: {sys.platform}")
         print()
-        print("✨ Features in v3.1:")
+        print(" Features in v3.1:")
         print("  • Fixed login authentication with correct credentials")
         print("  • Improved responsive GUI design")
         print("  • Enhanced window management and sizing")
@@ -81,12 +79,12 @@ class AWEElectronicsApp:
         print("  • Complete shopping cart functionality")
         print("  • Comprehensive admin dashboard")
         print()
-        print("🔑 Login Credentials:")
-        print("  👨‍💼 Admin: username='admin', password='admin123'")
-        print("  👤 Customer 1: username='customer1', password='customer123'")
-        print("  👤 Customer 2: username='saqib', password='saqib1'")
+        print(" Login Credentials:")
+        print("   Admin: username='admin', password='admin123'")
+        print("   Customer 1: username='customer1', password='customer123'")
+        print("   Customer 2: username='saqib', password='saqib1'")
         print()
-        print("🚀 Starting AWE Electronics Online Store...")
+        print(" Starting AWE Electronics Online Store...")
         print()
         
         logger.info(f"Starting {self.app_name} v{self.version}")
@@ -101,12 +99,12 @@ class AWEElectronicsApp:
             from utils.file_handler import initialize_default_data
             initialize_default_data()
             
-            print("✅ Data files initialized successfully")
+            print("Data files initialized successfully")
             return True
             
         except Exception as e:
             logger.error(f"Failed to setup data files: {str(e)}")
-            print(f"❌ Error setting up data files: {str(e)}")
+            print(f" Error setting up data files: {str(e)}")
             
             # Try to show error dialog if tkinter is available
             try:
@@ -173,7 +171,7 @@ class AWEElectronicsApp:
             
         except Exception as e:
             logger.error(f"Dependency verification failed: {str(e)}")
-            print(f"❌ Dependency error: {str(e)}")
+            print(f" Dependency error: {str(e)}")
             
             # Try to show error dialog
             try:
@@ -211,7 +209,7 @@ class AWEElectronicsApp:
             )
             root.destroy()
         except:
-            print(f"💥 {error_msg}")
+            print(f" {error_msg}")
     
     def start_gui(self):
         """Start the main GUI application"""
@@ -228,10 +226,10 @@ class AWEElectronicsApp:
         except ImportError as e:
             error_msg = f"Failed to import GUI modules: {str(e)}"
             logger.error(error_msg)
-            print(f"❌ {error_msg}")
+            print(f" {error_msg}")
             
             # Show detailed error information
-            print("\n📋 Required GUI files:")
+            print("\n Required GUI files:")
             required_gui_files = [
                 "gui/start_gui.py - Welcome screen",
                 "gui/login_gui.py - Login interface",
@@ -265,10 +263,10 @@ class AWEElectronicsApp:
         except Exception as e:
             error_msg = f"GUI startup failed: {str(e)}"
             logger.error(error_msg)
-            print(f"❌ {error_msg}")
+            print(f" {error_msg}")
             
             # Print traceback for debugging
-            print("\n🔍 Error details:")
+            print("\n Error details:")
             traceback.print_exc()
             
             try:
@@ -306,7 +304,7 @@ class AWEElectronicsApp:
             file_status = []
             for filename in self.required_files:
                 file_path = self.data_dir / filename
-                status = "✅ Found" if file_path.exists() else "❌ Missing"
+                status = "Found" if file_path.exists() else " Missing"
                 try:
                     if file_path.exists():
                         size = file_path.stat().st_size
@@ -321,7 +319,7 @@ class AWEElectronicsApp:
             if gui_dir.exists():
                 for gui_file in ["start_gui.py", "login_gui.py", "admin_gui.py", "customer_gui.py", "register_gui.py"]:
                     file_path = gui_dir / gui_file
-                    status = "✅ Found" if file_path.exists() else "❌ Missing"
+                    status = "Found" if file_path.exists() else " Missing"
                     gui_files.append(f"{gui_file}: {status}")
             
             info_text = "System Information:\n\n"
@@ -354,19 +352,19 @@ class AWEElectronicsApp:
             
         except Exception as e:
             logger.error(f"Failed to show system info: {str(e)}")
-            print(f"❌ Error showing system info: {str(e)}")
+            print(f" Error showing system info: {str(e)}")
     
     def run_setup(self):
         """Run setup process"""
         try:
-            print("🔧 Running setup process...")
+            print("Running setup process...")
             from setup import main as setup_main
             return setup_main()
         except ImportError:
-            print("⚠️ Setup script not found, continuing with basic initialization...")
+            print("Setup script not found, continuing with basic initialization...")
             return self.setup_data_files()
         except Exception as e:
-            print(f"❌ Setup failed: {str(e)}")
+            print(f" Setup failed: {str(e)}")
             return False
     
     def run(self):
@@ -379,45 +377,45 @@ class AWEElectronicsApp:
             self.display_startup_info()
             
             # Verify system requirements
-            print("🔍 Verifying system requirements...")
+            print("Verifying system requirements...")
             if not self.verify_dependencies():
-                print("\n💡 Try running 'python setup.py' first to initialize the application.")
+                print("\n Try running 'python setup.py' first to initialize the application.")
                 return 1
             
             # Setup data files
-            print("📁 Setting up data files...")
+            print(" Setting up data files...")
             if not self.setup_data_files():
-                print("\n💡 If this continues, check file permissions in the application directory.")
+                print("\n If this continues, check file permissions in the application directory.")
                 return 1
             
-            print("✅ System initialization completed successfully!")
-            print("🖥️  Launching GUI interface...")
+            print(" System initialization completed successfully!")
+            print("  Launching GUI interface...")
             print()
             
             # Launch GUI
             if not self.start_gui():
-                print("\n💡 If the GUI fails to start:")
+                print("\n If the GUI fails to start:")
                 print("   • Ensure all GUI files are present in gui/ directory")
                 print("   • Check that tkinter is properly installed")
                 print("   • Run 'python main.py --info' for system information")
                 return 1
             
-            print("👋 Thank you for using AWE Electronics Online Store!")
+            print(" Thank you for using AWE Electronics Online Store!")
             logger.info("Application shutdown normally")
             return 0
             
         except KeyboardInterrupt:
-            print("\n🛑 Application interrupted by user")
+            print("\n Application interrupted by user")
             logger.info("Application interrupted by user")
             return 0
             
         except Exception as e:
             error_msg = f"Critical error during startup: {str(e)}"
-            print(f"💥 {error_msg}")
+            print(f" {error_msg}")
             logger.critical(error_msg)
             
             # Print full traceback for debugging
-            print("\n🔍 Full error traceback:")
+            print("\n Full error traceback:")
             traceback.print_exc()
             
             try:
@@ -447,7 +445,7 @@ def main():
         
         if arg in ['--help', '-h']:
             print(f"""
-🏪 AWE Electronics Online Store v3.1
+     AWE Electronics Online Store v3.1
 
 Usage: python main.py [options]
 
@@ -502,7 +500,7 @@ GitHub: https://github.com/awe-electronics/online-store
             return 0 if success else 1
             
         else:
-            print(f"❌ Unknown argument: {arg}")
+            print(f"  Unknown argument: {arg}")
             print("Use --help for usage information")
             return 1
     
@@ -512,7 +510,7 @@ GitHub: https://github.com/awe-electronics/online-store
 
 def test_imports():
     """Test if all required modules can be imported"""
-    print("🧪 Testing imports...")
+    print(" Testing imports...")
     
     modules_to_test = [
         ("tkinter", "GUI framework"),
@@ -531,17 +529,17 @@ def test_imports():
     for module_name, description in modules_to_test:
         try:
             __import__(module_name)
-            print(f"✅ {module_name} - {description}")
+            print(f" {module_name} - {description}")
         except ImportError as e:
-            print(f"❌ {module_name} - {description} - Error: {e}")
+            print(f" {module_name} - {description} - Error: {e}")
             all_good = False
         except Exception as e:
-            print(f"⚠️ {module_name} - {description} - Warning: {e}")
+            print(f" {module_name} - {description} - Warning: {e}")
     
     if all_good:
-        print("\n🎉 All imports successful! Application should run properly.")
+        print("\n All imports successful! Application should run properly.")
     else:
-        print("\n⚠️ Some imports failed. Please check file structure and dependencies.")
+        print("\n Some imports failed. Please check file structure and dependencies.")
     
     return all_good
 
@@ -563,10 +561,10 @@ if __name__ == "__main__":
         sys.exit(exit_code)
         
     except KeyboardInterrupt:
-        print("\n🛑 Application interrupted")
+        print("\n Application interrupted")
         sys.exit(0)
         
     except Exception as e:
-        print(f"💥 Critical error: {e}")
+        print(f" Critical error: {e}")
         traceback.print_exc()
         sys.exit(1)
