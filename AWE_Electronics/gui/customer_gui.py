@@ -138,20 +138,24 @@ def customer_gui(user, previous_geometry="1000x700"):
     notebook = ttk.Notebook(root, style='Customer.TNotebook')
     notebook.pack(fill='both', expand=True, padx=12, pady=12)
     
-    # Store cart loading function for tab switching
+    # Store functions for tab switching
     cart_load_function = None
+    orders_load_function = None
     
     # Create all tabs
     create_products_tab(notebook, colors, user, update_cart_display)
     cart_load_function = create_cart_tab(notebook, colors, user, update_cart_display)
-    create_orders_tab(notebook, colors, user)
+    orders_load_function = create_orders_tab(notebook, colors, user)
     
-    # Handle tab changes to refresh cart when cart tab is selected
+    # Handle tab changes to refresh data when tabs are selected
     def on_tab_change(event):
         selected_tab = event.widget.tab('current')['text']
         if '🛒' in selected_tab and cart_load_function:
             # When cart tab is selected, refresh the cart display
-            root.after(10, cart_load_function)  # Small delay to ensure tab is fully loaded
+            root.after(10, cart_load_function)
+        elif '📋' in selected_tab and orders_load_function:
+            # When orders tab is selected, refresh the orders display
+            root.after(10, orders_load_function)
     
     notebook.bind('<<NotebookTabChanged>>', on_tab_change)
     
@@ -568,13 +572,21 @@ def create_cart_tab(notebook, colors, user, update_cart_display):
                               command=clear_cart)
     clear_cart_btn.pack(side='left', padx=(0, 10))
     
+    # Store reference to parent notebook for tab switching
+    cart_frame.notebook = notebook
+    
     def checkout():
         if not user.get("cart"):
             messagebox.showerror("Empty Cart", "Your cart is empty!")
             return
         
-        # Create checkout window
-        CheckoutWindow(cart_frame, user, colors, load_cart)
+        # Create checkout window with callback to refresh orders
+        def post_checkout_callback():
+            load_cart()  # Refresh cart
+            # Switch to orders tab after successful checkout
+            cart_frame.notebook.select(2)  # Orders tab is at index 2
+        
+        CheckoutWindow(cart_frame, user, colors, post_checkout_callback)
     
     checkout_btn = tk.Button(cart_actions, 
                            text="💳 Checkout", 
@@ -594,7 +606,7 @@ def create_cart_tab(notebook, colors, user, update_cart_display):
     return load_cart
 
 def create_orders_tab(notebook, colors, user):
-    """Create the order history tab"""
+    """Create the order history tab - returns load_orders function"""
     orders_frame = tk.Frame(notebook, bg='white')
     notebook.add(orders_frame, text="📋 Order History")
     
@@ -606,7 +618,7 @@ def create_orders_tab(notebook, colors, user):
                            font=('Segoe UI', 16, 'bold'), 
                            bg='white', 
                            fg=colors['primary'])
-    orders_title.pack()
+    orders_title.pack(side='left')
     
     orders_listbox = tk.Listbox(orders_frame, 
                                font=('Segoe UI', 10),
@@ -628,27 +640,56 @@ def create_orders_tab(notebook, colors, user):
                 orders_listbox.insert(tk.END, "No orders found. Start shopping!")
                 return
             
-            for order_data in user_orders:
+            # Display orders in reverse chronological order (newest first)
+            for order_data in reversed(user_orders):
                 order = order_data["order"]
                 order_id = order["order_id"][:8] + "..."
                 items_count = len(order["items"])
                 total = f"${order['total']:.2f}"
+                order_date = order.get("order_date", "")
+                if order_date:
+                    # Format date nicely
+                    try:
+                        from datetime import datetime
+                        dt = datetime.fromisoformat(order_date)
+                        date_str = dt.strftime("%Y-%m-%d %H:%M")
+                    except:
+                        date_str = order_date[:16]
+                else:
+                    date_str = "Unknown date"
                 
-                display_text = f"Order {order_id} | {items_count} items | {total} | ✅ Completed"
+                display_text = f"Order {order_id} | {date_str} | {items_count} items | {total} | ✅ Completed"
                 orders_listbox.insert(tk.END, display_text)
                 
         except Exception as e:
             messagebox.showerror("Error", f"Failed to load orders: {str(e)}")
     
-    # Load orders
+    # Add refresh button
+    refresh_btn = tk.Button(orders_header,
+                           text="🔄 Refresh",
+                           font=('Segoe UI', 10, 'bold'),
+                           bg=colors['secondary'],
+                           fg='white',
+                           border=0,
+                           padx=15,
+                           pady=6,
+                           cursor='hand2',
+                           relief='flat',
+                           command=load_orders)
+    refresh_btn.pack(side='right')
+    
+    # Load orders initially
     load_orders()
+    
+    # Return the load function for tab switching
+    return load_orders
 
 class CheckoutWindow:
     """Modern checkout window with proper sizing"""
-    def __init__(self, parent, user, colors, refresh_cart_callback):
+    def __init__(self, parent, user, colors, refresh_callback):
         self.user = user
         self.colors = colors
-        self.refresh_cart = refresh_cart_callback
+        self.refresh_callback = refresh_callback
         
         self.window = tk.Toplevel(parent)
         self.window.title("Checkout - AWE Electronics")
@@ -959,7 +1000,10 @@ class CheckoutWindow:
             
             # Clear cart
             self.user["cart"] = []
-            self.refresh_cart()
+            
+            # Call the refresh callback which will refresh cart and switch to orders tab
+            if self.refresh_callback:
+                self.refresh_callback()
             
             self.window.destroy()
             

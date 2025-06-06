@@ -34,5 +34,77 @@
         "category": "Audio",
         "stock": 100,
         "description": ""
+    },
+    {
+        "product_id": "P007",
+        "name": "Wireless Keyboard",
+        "price": 60.0,
+        "category": "Accessories",
+        "stock": 30,
+        "description": "Ergonomic keyboard for comfortable typing."
+    },
+    {
+        "product_id": "P008",
+        "name": "Portable SSD",
+        "price": 150.0,
+        "category": "Storage",
+        "stock": 30,
+        "description": "1TB USB-C compatible portable SSD."
+    },
+    {
+        "product_id": "P010",
+        "name": "VR Headset",
+        "price": 600.0,
+        "category": "Gaming",
+        "stock": 12,
+        "description": "Immersive VR headset with motion tracking."
+    },
+    {
+        "product_id": "P013",
+        "name": "Smart Light Bulb",
+        "price": 25.0,
+        "category": "Home Automation",
+        "stock": 0,
+        "description": "Color-changing smart bulb with app control."
+    },
+    {
+        "product_id": "P014",
+        "name": "Mechanical Keyboard",
+        "price": 40.0,
+        "category": "Accessories",
+        "stock": 600,
+        "description": "Mechanical keyboard with customizable RGB lighting."
+    },
+    {
+        "product_id": "P015",
+        "name": "Noise Cancelling Headphones",
+        "price": 350.0,
+        "category": "Audio",
+        "stock": 15,
+        "description": "Wireless headphones with active noise cancellation."
+    },
+    {
+        "product_id": "P016",
+        "name": "Headphone",
+        "price": 150.0,
+        "category": "Audio",
+        "stock": 10,
+        "description": ""
+    },
+    {
+        "product_id": "P017",
+        "name": "Headphones",
+        "price": 100.0,
+        "category": "Audio",
+        "stock": 10,
+        "description": ""
+    },
+    {
+        "product_id": "P018",
+        "name": "Headphone",
+        "price": 100.0,
+        "category": "Audio",
+        "stock": 15,
+        "description": ""
     }
 ]

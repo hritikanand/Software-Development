@@ -32,5 +32,65 @@
         "phone_number": "0456038868",
         "full_name": "saqib",
         "cart": []
+    },
+    {
+        "username": "saqib",
+        "password": "saqib1",
+        "email": "saqibsoomro5555@gmail.com",
+        "role": "customer",
+        "address": "4 kelebek",
+        "phone_number": "0456039968",
+        "full_name": "saqib soomro",
+        "cart": []
+    },
+    {
+        "username": "saqib12",
+        "password": "saqib2",
+        "email": "saqibsoomro22@gmail.com",
+        "role": "customer",
+        "address": "4 kelebelk",
+        "phone_number": "0456039985",
+        "full_name": "saqi",
+        "cart": []
+    },
+    {
+        "username": "saqib123",
+        "password": "saqib1",
+        "email": "saqibsoomro08@gmail.com",
+        "role": "customer",
+        "address": "4 kelebek",
+        "phone_number": "0456039986",
+        "full_name": "saqib",
+        "cart": []
+    },
+    {
+        "username": "saqib9",
+        "password": "saqib1",
+        "email": "saqibsoomro77@gmail.com",
+        "role": "customer",
+        "address": "4 kelebek",
+        "phone_number": "0456038855",
+        "full_name": "saqib",
+        "cart": []
+    },
+    {
+        "username": "saqib7",
+        "password": "saqib1",
+        "email": "saqibsoomro232@gmail.com",
+        "role": "customer",
+        "address": "kelebek",
+        "phone_number": "0456555555",
+        "full_name": "saqib",
+        "cart": []
+    },
+    {
+        "username": "saqib6",
+        "password": "saqib1",
+        "email": "saqibsoomro11@gmail.com",
+        "role": "customer",
+        "address": "kelebek",
+        "phone_number": "0456456288",
+        "full_name": "saqib",
+        "cart": []
     }
 ]
